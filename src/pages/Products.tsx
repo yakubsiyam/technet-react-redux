@@ -23,6 +23,7 @@ export default function Products() {
   const { data, isLoading, error } = useGetProductsQuery(undefined);
 
   const { toast } = useToast();
+  console.log(isLoading, error, toast);
 
   const { priceRange, status } = useAppSelector((state) => state.product);
   const dispatch = useDispatch();
